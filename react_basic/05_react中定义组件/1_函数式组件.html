@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 准备个容器 -->
+    <div id="test"></div>
+
+    <!-- 引入react核心库 -->
+    <script type="text/javascript" src="../js/react.development.js"></script>
+    <!-- 引入react-dom用于支持react操作DOM -->
+    <script type="text/javascript" src="../js/react-dom.development.js"></script>
+    <!-- 引入babel，用于将jsx转为js -->
+    <script type="text/javascript" src="../js/babel.min.js"></script>
+
+    <script type="text/babel">
+        // 创建函数式组件（适用于简单组件）
+        function demo() {
+            // 此时的this是undefined，因为babel翻译后开启了严格模式
+            return <h2>我是用函数式定义的组件(适用于【简单组件】的定义)</h2>
+        }
+        渲染组件到页面
+        ReactDOM.render(<Demo />, document.getElementById('test'))
+    </script>
+</body>
+</html>
