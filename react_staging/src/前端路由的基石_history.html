@@ -36,6 +36,8 @@
 		history.listen((location) => {
 			console.log('请求路由路径变化了', location)
 		})
+		let reg = /[abc]/g
+		console.log(reg.test('ab'))
 	</script>
 </body>
 </html>
