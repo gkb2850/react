@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { NavLink, Route, Routes, Switch, Redirect } from 'react-router-dom'
+import { NavLink, Route, Routes, Switch } from 'react-router-dom'
 import Home from './pages/Home'//Home是路由组件
 import About from './pages/About'//About是路由组件
 import Header from './components/Header'//Header是一般组件
@@ -22,7 +22,7 @@ export default class App extends Component {
                 <a className="list-group-item active" href="./home.html">Home</a> */}
                 {/* 在React中靠路由链接实现切换组件 */}
                 {/* NavLink默认给选中的加上active类名 如果想改就加activeClassName */}
-                  <MyNavLink to="/home">Home</MyNavLink>
+                  <MyNavLink to="/home/a/b">Home</MyNavLink>
                   <MyNavLink to="/about">About</MyNavLink>
               </div>
             </div>
@@ -32,9 +32,8 @@ export default class App extends Component {
                   {/* 注册路由 react-router-dom v5版本 */}
                   {/* switch可以防止路由一直往下匹配，只匹配一个路由 */}
                   <Switch>
-                    <Route path="/about" component={About} />
-                    <Route path="/home" component={Home} />
-                    <Redirect to="/home"></Redirect>
+                    <Route exact={true} path="/about" component={About} />
+                    <Route exact={true} path="/home" component={Home} />
                   </Switch>
                     {/* 注册路由 react-router-dom v6版本 */}
                     {/* <Routes>

@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
-import { NavLink, Route, Routes, Switch, Redirect } from 'react-router-dom'
+import { NavLink, Route, Routes, Switch } from 'react-router-dom'
 import Home from './pages/Home'//Home是路由组件
 import About from './pages/About'//About是路由组件
 import Header from './components/Header'//Header是一般组件
 import MyNavLink from './components/MyNavLink'
+import Test from './components/Test'
 
 export default class App extends Component {
   render() {
@@ -15,7 +16,7 @@ export default class App extends Component {
           </div>
         </div>
           <div className="row">
-            <div className="col-xs-2 col-xs-offset-2">  
+            <div className="col-xs-2 col-xs-offset-2">
               <div className="list-group">
                 {/* 原生html中，靠<a>跳转不同的页面 */}
                 {/* <a className="list-group-item" href="./about.html">About</a>
@@ -34,7 +35,7 @@ export default class App extends Component {
                   <Switch>
                     <Route path="/about" component={About} />
                     <Route path="/home" component={Home} />
-                    <Redirect to="/home"></Redirect>
+                    <Route path="/home" component={Test} />
                   </Switch>
                     {/* 注册路由 react-router-dom v6版本 */}
                     {/* <Routes>
