@@ -6,6 +6,7 @@ import Message from './Messages'
 
 export default class Home extends Component {
     render() {
+        console.log(this)
         return (
             <div>
               <h2>Home组件内容</h2>

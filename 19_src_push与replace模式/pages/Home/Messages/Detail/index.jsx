@@ -26,6 +26,7 @@ export default class Detail extends Component {
 
         //接收search参数
         const { id, title } = this.props.location.state
+        console.log(this.props)
         const findResult = data.find((obj) => {
             return obj.id === id
         })
